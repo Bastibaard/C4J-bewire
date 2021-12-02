@@ -1,7 +1,8 @@
-package hackthefuture.c4j;
+package hackthefuture.c4j.webapi;
 
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
+import kong.unirest.ObjectMapper;
 import kong.unirest.Unirest;
 
 public class Api {
@@ -15,6 +16,11 @@ public class Api {
                 .asJson();
     }
 
+    public HttpResponse<Case> GetCaseInvestigations(String caseId) {
+        return Unirest.get("/case/{caseId}")
+                .routeParam("caseId", caseId)
+                .asObject(Case.class);
+    }
 }
 
 
