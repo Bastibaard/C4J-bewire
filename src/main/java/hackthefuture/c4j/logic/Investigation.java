@@ -1,4 +1,4 @@
-package hackthefuture.c4j.webapi;
+package hackthefuture.c4j.logic;
 
 import java.util.Objects;
 

@@ -1,5 +1,7 @@
 package hackthefuture.c4j.webapi;
 
+import hackthefuture.c4j.logic.Investigation;
+
 import java.util.List;
 import java.util.Objects;
 
