@@ -4,15 +4,15 @@ Project voor hackthefuture
 ## POST -> /team:
 
 
-{
+```json{
     "name": "The RAID rebuilders",
     "id": "442e272c-5fc0-4fa6-93f5-f03121e30ac4"
-}
+}```
 
 ## GET -> /case/07fd951b-6ec3-430e-a596-02bf2a819c52:
 
 
-{
+```json{
     "caseId": "07fd951b-6ec3-430e-a596-02bf2a819c52",
     "investigations": [
         {
@@ -114,4 +114,4 @@ Project voor hackthefuture
             "outcome": null
         }
     ]
-}
+}```
