@@ -17,12 +17,7 @@ public class StartUp {
     private void run() throws ExecutionException, InterruptedException {
         Api testApi = new Api();
 
-        /*HttpResponse<Investigation> investigationFeedback = testApi.SubmitInvestigation("zbsqabqjiu", "80e12000-b972-4ce1-8a97-e7a9d25df207");
-        System.out.println(investigationFeedback.getBody());
-        */
-
         HttpResponse<Case> caseInvestigations = testApi.GetCaseInvestigations("07fd951b-6ec3-430e-a596-02bf2a819c52");
-        //System.out.println(caseInvestigations.getBody().getInvestigations().get(0).getId());
 
         // Oplossen
 
@@ -41,7 +36,15 @@ public class StartUp {
         System.out.println(Investigations.isAlphabetical(alphabet));
 
         HttpResponse<Investigation> stringToHexFeedback = testApi.SubmitInvestigation(Investigations.StringToHex(strToHex), "83d83ee8-c71f-4d2b-aad8-35b231495b18");
-        System.out.println(stringToHexFeedback);
+        System.out.println(stringToHexFeedback.getBody());
+        HttpResponse<Investigation> base64decode = testApi.SubmitInvestigation(Investigations.Base64Decode(base64), "098fbde5-ffa2-4e60-a218-c7d6b325a531");
+        System.out.println(base64decode.getBody());
+        HttpResponse<Investigation> reverseThisString = testApi.SubmitInvestigation(Investigations.ReverseString(reverseThis), "7c53a11c-bd65-4bfd-95e1-fa5eee4bff43");
+        System.out.println(reverseThisString.getBody());
+        HttpResponse<Investigation> guessTheDate = testApi.SubmitInvestigation(Investigations.CheckDays(dateStuff), "761da2b7-1ca7-4a96-ad02-ed874d892e52");
+        System.out.println(guessTheDate.getBody());
+        HttpResponse<Investigation> isThisAlphabetical = testApi.SubmitInvestigation(Investigations.isAlphabetical(alphabet), "5e5903fa-912d-498a-b22c-55755bdb8dc0");
+        System.out.println(isThisAlphabetical.getBody());
 
     }
 }
