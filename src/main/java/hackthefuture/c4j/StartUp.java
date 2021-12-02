@@ -7,7 +7,10 @@ public class StartUp {
     }
 
     private void run() {
-        System.out.println("Hello C4J!");
+        Api test = new Api();
+        String testData = String.valueOf(test.test());
+        System.out.println(testData);
     }
+
 
 }
