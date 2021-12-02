@@ -1,5 +1,8 @@
 package hackthefuture.c4j;
 
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
+
 public class StartUp {
 
     public static void main(String[] args) {
@@ -8,9 +11,7 @@ public class StartUp {
 
     private void run() {
         Api test = new Api();
-        String testData = String.valueOf(test.test());
-        System.out.println(testData);
+        HttpResponse<JsonNode> testData = test.GetSuspects();
+        System.out.print(testData.getBody());
     }
-
-
 }
