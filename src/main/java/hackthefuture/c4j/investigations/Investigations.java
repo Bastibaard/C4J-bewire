@@ -33,11 +33,30 @@ public abstract class Investigations {
                 res.append(i).append(",");
             }
         }
-        return res.toString();
+        return res.substring(0,res.length()-1);
     }
 
     public static String ReverseString(String strToReverse){
         return new StringBuilder(strToReverse).reverse().toString();
+    }
+
+    public static String isAlphabetical(String input){
+        //ascii waarden van getallen < hoofdletters < kleine letters dus de volgorde kan kloppen opt eerste zicht al kloppen.
+        int arrLength = input.length();
+
+        //Character array maken op basis van de input
+        char[] charArray = new char[arrLength];
+        for (int i = 0; i < arrLength; i++) {
+            charArray[i] = input.charAt(i);
+        }
+        //character array sorteren en dan vergelijken met het originele woord
+        //als de volledige array / woord gelijk zijn aan elkaar staat het woord op alfabetische volgorde
+        Arrays.sort(charArray);
+        for (int i = 0; i < arrLength; i++)
+            if (charArray[i] != input.charAt(i))
+                return "N";
+
+        return "Y";
     }
 
 }
