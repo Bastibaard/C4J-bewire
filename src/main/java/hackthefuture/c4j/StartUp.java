@@ -2,7 +2,7 @@ package hackthefuture.c4j;
 
 import hackthefuture.c4j.logic.Investigation;
 import hackthefuture.c4j.webapi.Api;
-import hackthefuture.c4j.webapi.Case;
+import hackthefuture.c4j.logic.Case;
 import kong.unirest.HttpResponse;
 import hackthefuture.c4j.investigations.Investigations;
 import kong.unirest.json.JSONObject;
