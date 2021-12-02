@@ -1,4 +1,4 @@
-package be.hackthefuture.c4j;
+package hackthefuture.c4j;
 
 public class StartUp {
 
