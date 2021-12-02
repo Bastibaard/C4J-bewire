@@ -1,8 +1,6 @@
 package hackthefuture.c4j.webapi;
 
 import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.ObjectMapper;
 import kong.unirest.Unirest;
 
 public class Api {
@@ -11,9 +9,9 @@ public class Api {
         Unirest.config().defaultBaseUrl("http://htf.bewire.org");
     }
 
-    public HttpResponse<JsonNode> GetSuspects() {
+    public HttpResponse<Suspects> GetSuspects() {
         return Unirest.get("/suspects")
-                .asJson();
+                .asObject(Suspects.class);
     }
 
     public HttpResponse<Case> GetCaseInvestigations(String caseId) {
