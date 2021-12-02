@@ -5,18 +5,24 @@ import hackthefuture.c4j.webapi.Case;
 import hackthefuture.c4j.webapi.Suspects;
 import kong.unirest.HttpResponse;
 import hackthefuture.c4j.investigations.Investigations;
+import kong.unirest.JsonNode;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 public class StartUp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         new StartUp().run();
     }
 
-    private void run() {
+    private void run() throws ExecutionException, InterruptedException {
         Api testApi = new Api();
 
-        HttpResponse<Suspects> suspects = testApi.GetSuspects();
-        System.out.print(suspects.getBody().getSuspects());
+        //HttpResponse<Suspects> suspects = testApi.GetSuspects();
+        //System.out.println(suspects.getBody().getSuspects());
+
+        
 
         HttpResponse<Case> caseInvestigations = testApi.GetCaseInvestigations("07fd951b-6ec3-430e-a596-02bf2a819c52");
         System.out.println(caseInvestigations.getBody().getInvestigations().get(0).getId());
