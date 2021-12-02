@@ -1,10 +1,13 @@
 package hackthefuture.c4j.investigations;
 
+import kong.unirest.json.JSONObject;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Set;
+import java.text.DateFormatSymbols;
+import java.text.SimpleDateFormat;
+import java.time.YearMonth;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class Investigations {
@@ -57,6 +60,18 @@ public abstract class Investigations {
                 return "N";
 
         return "Y";
+    }
+
+    public static String CheckDays(JSONObject date){
+        int month = Integer.parseInt(String.valueOf(date.get("month")));
+        int year = Integer.parseInt(String.valueOf(date.get("year")));
+
+        YearMonth ym = YearMonth.of(year, month);
+
+        String firstDay = ym.atDay(1).getDayOfWeek().name();
+        String lastDay = ym.atEndOfMonth().getDayOfWeek().name();
+
+        return firstDay+"-"+lastDay;
     }
 
 }
