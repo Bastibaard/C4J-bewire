@@ -1,5 +1,6 @@
 package hackthefuture.c4j;
 
+import hackthefuture.c4j.logic.Investigation;
 import hackthefuture.c4j.webapi.Api;
 import hackthefuture.c4j.webapi.Case;
 import hackthefuture.c4j.webapi.Suspects;
@@ -22,7 +23,8 @@ public class StartUp {
         //HttpResponse<Suspects> suspects = testApi.GetSuspects();
         //System.out.println(suspects.getBody().getSuspects());
 
-        
+        HttpResponse<Investigation> investigationFeedback = testApi.SubmitInvestigation("zbsqabqjiu", "80e12000-b972-4ce1-8a97-e7a9d25df207");
+        System.out.println(investigationFeedback.getBody());
 
         HttpResponse<Case> caseInvestigations = testApi.GetCaseInvestigations("07fd951b-6ec3-430e-a596-02bf2a819c52");
         System.out.println(caseInvestigations.getBody().getInvestigations().get(0).getId());
