@@ -119,3 +119,47 @@ Project voor hackthefuture
     ]
 }
 ```
+
+## Answers:
+
+```json
+{
+    "id": "83d83ee8-c71f-4d2b-aad8-35b231495b18",
+    "investigation": "Convert the following String to hexadecimal value (Use a space delimiter between values)",
+    "investigationParameters": "9Oqopcyl4RQa",
+    "attemptsRemaining": "1",
+    "outcome": "Instagram Profile"
+}
+
+{
+    "id": "098fbde5-ffa2-4e60-a218-c7d6b325a531",
+    "investigation": "Decode the following String. It uses a quite common encoding, find out which!",
+    "investigationParameters": "MVdNcmpYeFBqTlJyR2hJcklHSWttQTlhaXQzZHBmbHZEZUYzNmFrbGNxWg==",
+    "attemptsRemaining": "10",
+    "outcome": "Man"
+}
+
+{
+    "id": "7c53a11c-bd65-4bfd-95e1-fa5eee4bff43",
+    "investigation": "Reverse the following String",
+    "investigationParameters": "Dw7mfcXT2BzlRWSlCCsPuSKIAbHcKX7MFO0WmLcSFewn5KcwPMOt4OngHAySEOfHXuWAA9FVJ0c1uubZe8EZkuzwNU7QgaKKkL8l2hjzrgGwxU5nfbgrAgrwH63IG",
+    "attemptsRemaining": "1",
+    "outcome": "Twitter Verified"
+}
+
+{
+    "id": "761da2b7-1ca7-4a96-ad02-ed874d892e52",
+    "investigation": "Answer is the first and last day of the month (MONDAY - SUNDAY) eg: MONDAY-FRIDAY",
+    "investigationParameters": "{\"month\":\"5\",\"year\":\"1991\"}",
+    "attemptsRemaining": "1",
+    "outcome": "Engels talig"
+}
+
+{
+    "id": "5e5903fa-912d-498a-b22c-55755bdb8dc0",
+    "investigation": "Is the following string in alphabetical order? (Use N or Y as answer)",
+    "investigationParameters": "001244799AAACCEFHIIIJKMOPPPTTUUVWWXXYYYZZaabdefgijklmmnpprrrsuuvvwwxxyy",
+    "attemptsRemaining": "1",
+    "outcome": "Miljardair"
+}
+```
