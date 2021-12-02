@@ -1,7 +1,8 @@
 package hackthefuture.c4j.investigations;
 
-import org.apache.commons.codec.binary.Hex;;import java.nio.charset.StandardCharsets;
-import java.util.Locale;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.binary.Hex;
+import java.nio.charset.StandardCharsets;
 
 public abstract class Investigations {
 
@@ -13,6 +14,11 @@ public abstract class Investigations {
         // Echter laatste spatie moet nog verwijderd worden (not sure of het anders als fout zou aangeduid worden
         // Geeft normaal string "39 4F 71 6F 70 63 79 6C 34 52 51 61" terug
         return res.substring(0,res.length()-1);
+    }
+
+    public static String Base64Decode(String input){
+        byte[] base64decoded = Base64.decodeBase64(input);
+        return new String(base64decoded, StandardCharsets.UTF_8);
     }
 
 }

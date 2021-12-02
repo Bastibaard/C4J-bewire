@@ -10,6 +10,7 @@ public class StartUp {
 
     private void run() {
         System.out.println(Investigations.StringToHex("9Oqopcyl4RQa"));
+        System.out.println(Investigations.Base64Decode("MVdNcmpYeFBqTlJyR2hJcklHSWttQTlhaXQzZHBmbHZEZUYzNmFrbGNxWg=="));
     }
 
 
