@@ -33,8 +33,11 @@ public abstract class Investigations {
                 res.append(i).append(",");
             }
         }
-
         return res.toString();
+    }
+
+    public static String ReverseString(String strToReverse){
+        return new StringBuilder(strToReverse).reverse().toString();
     }
 
 }
