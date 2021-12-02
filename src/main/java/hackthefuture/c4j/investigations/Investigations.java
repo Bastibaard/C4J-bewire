@@ -3,6 +3,9 @@ package hackthefuture.c4j.investigations;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public abstract class Investigations {
 
@@ -19,6 +22,19 @@ public abstract class Investigations {
         //id = 098fbde5-ffa2-4e60-a218-c7d6b325a531
         byte[] base64decoded = Base64.decodeBase64(input);
         return new String(base64decoded, StandardCharsets.UTF_8);
+    }
+
+    public static String FindMissingNumbers(int[] array){
+        Set<Integer> temp = Arrays.stream(array).boxed().collect(Collectors.toSet());
+        StringBuilder res = new StringBuilder("");
+
+        for (int i = 0; i < 4181 ; i++) {
+            if (!temp.contains(i)){
+                res.append(i).append(",");
+            }
+        }
+
+        return res.toString();
     }
 
 }
