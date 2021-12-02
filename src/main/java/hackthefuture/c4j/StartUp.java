@@ -17,11 +17,12 @@ public class StartUp {
     private void run() throws ExecutionException, InterruptedException {
         Api testApi = new Api();
 
-        HttpResponse<Investigation> investigationFeedback = testApi.SubmitInvestigation("zbsqabqjiu", "80e12000-b972-4ce1-8a97-e7a9d25df207");
+        /*HttpResponse<Investigation> investigationFeedback = testApi.SubmitInvestigation("zbsqabqjiu", "80e12000-b972-4ce1-8a97-e7a9d25df207");
         System.out.println(investigationFeedback.getBody());
+        */
 
         HttpResponse<Case> caseInvestigations = testApi.GetCaseInvestigations("07fd951b-6ec3-430e-a596-02bf2a819c52");
-        System.out.println(caseInvestigations.getBody().getInvestigations().get(0).getId());
+        //System.out.println(caseInvestigations.getBody().getInvestigations().get(0).getId());
 
         // Oplossen
 
@@ -32,14 +33,14 @@ public class StartUp {
         JSONObject dateStuff = new JSONObject(caseInvestigations.getBody().getInvestigationById("761da2b7-1ca7-4a96-ad02-ed874d892e52").getInvestigationParameters());
         String alphabet = caseInvestigations.getBody().getInvestigationById("5e5903fa-912d-498a-b22c-55755bdb8dc0").getInvestigationParameters();
 
-        Investigations.StringToHex(strToHex);
-        Investigations.Base64Decode(base64);
+        System.out.println(Investigations.StringToHex(strToHex));
+        System.out.println(Investigations.Base64Decode(base64));
         //Investigations.FindMissingNumbers(fibonacci); //this one will not work -> opdracht verkeerd begrepen
-        Investigations.ReverseString(reverseThis);
-        Investigations.CheckDays(dateStuff);
-        Investigations.isAlphabetical(alphabet);
+        System.out.println(Investigations.ReverseString(reverseThis));
+        System.out.println(Investigations.CheckDays(dateStuff));
+        System.out.println(Investigations.isAlphabetical(alphabet));
 
-
+        HttpResponse<Investigation> stringToHexFeedback = testApi.SubmitInvestigation(Investigations.StringToHex(strToHex), "83d83ee8-c71f-4d2b-aad8-35b231495b18");
 
     }
 }
