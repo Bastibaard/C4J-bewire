@@ -41,6 +41,7 @@ public class StartUp {
         System.out.println(Investigations.isAlphabetical(alphabet));
 
         HttpResponse<Investigation> stringToHexFeedback = testApi.SubmitInvestigation(Investigations.StringToHex(strToHex), "83d83ee8-c71f-4d2b-aad8-35b231495b18");
+        System.out.println(stringToHexFeedback);
 
     }
 }
