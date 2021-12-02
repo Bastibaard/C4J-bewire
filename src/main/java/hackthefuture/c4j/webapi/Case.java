@@ -19,6 +19,15 @@ public class Case {
         this.investigations = investigations;
     }
 
+    public Investigation getInvestigationById(String id){
+        for (Investigation inv : investigations){
+            if (inv.getId().equals(id)){
+                return inv;
+            };
+        }
+        return null;
+    }
+
     public String getId() {
         return id;
     }
