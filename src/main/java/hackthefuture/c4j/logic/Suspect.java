@@ -3,6 +3,7 @@ package hackthefuture.c4j.logic;
 import java.util.Objects;
 
 public class Suspect {
+
     private String id;
     private String name;
 
